@@ -1,0 +1,128 @@
+/* line 1, C:/Users/Madzia/Desktop/Calometer/scss/_header.scss */
+header {
+  background-color: #60CCA7;
+  width: 100%;
+  height: 5em;
+  margin: 0 auto;
+}
+
+/* line 6, C:/Users/Madzia/Desktop/Calometer/scss/_header.scss */
+header img {
+  padding-top: 0.4em;
+}
+
+/* line 2, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+button {
+  align-content: center;
+  border: none;
+  width: 3em;
+  height: 3em;
+  background-color: white;
+}
+
+/* line 9, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+button:hover {
+  border: 0;
+}
+
+/* line 12, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+img:hover {
+  border: 0;
+}
+
+/* line 15, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+table {
+  border-collapse: collapse;
+}
+
+/* line 18, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+td {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+}
+
+/* line 21, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.table_head {
+  padding-bottom: 25px;
+  font-size: 21px;
+  color: grey;
+}
+
+/* line 26, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.cell {
+  vertical-align: top;
+  width: 120px;
+  height: 100px;
+  font-size: 12px;
+  text-align: right;
+  padding: 0 auto;
+}
+
+/* line 34, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.cal_header {
+  width: 120px;
+  text-align: center;
+}
+
+/* line 38, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.today {
+  background-color: #60CCA7;
+}
+
+/* line 42, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.activity_menu {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  display: inline-block;
+  width: 15em;
+  height: 20em;
+  margin: 3em 0 0 5em;
+}
+
+/* line 49, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.cal_canvas {
+  width: 50em;
+  height: 50em;
+  display: inline;
+  float: left;
+}
+
+/* line 55, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.cal_buttons {
+  position: relative;
+  left: 5em;
+}
+
+/* line 60, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
+.activities {
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  width: auto;
+  margin: 0.7em;
+  padding: 0.2em;
+  text-align: center;
+  float: left;
+}
+
+/* line 8, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
+* {
+  font-family: 'Roboto', sans-serif;
+  color: grey;
+}
+
+/* line 12, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
+.main_container {
+  width: 100em;
+  margin: 0 auto;
+}
+
+/* line 16, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
+.container {
+  width: 100em;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}

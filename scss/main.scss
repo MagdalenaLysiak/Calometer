@@ -1,0 +1,21 @@
+@import'variables';
+@import'modules';
+@import'header';
+@import'main_calc';
+@import'main_calendar';
+@import'footer';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    color: $fontColor;
+}
+.main_container{
+    width: 100em;
+    margin: 0 auto;
+}
+.container {
+    width: 100em;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}

@@ -5,14 +5,18 @@ document.addEventListener('DOMContentLoaded', function(event) {
         cal_days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
         cal_current_date = new Date(),
         today = cal_current_date.getDate(),
-        div = document.querySelector('.calendar');
+        div = document.querySelector('.calendar'),
+        actual_month = cal_current_date.getMonth(),
+        actual_year = cal_current_date.getYear();
     
     function makeCalendar(actionParameter = false, second = false){
         function makeMonth() {
-
             function Calendar(month, year) {
                 if(actionParameter === "next") { // next month
-                    cal_current_date.getMonth() -1;
+                    cal_current_date.setMonth(actual_month+1);
+                }
+                if(actionParameter === "prev") { // previous month
+                    cal_current_date.setMonth(actual_month-1);
                 }
                 this.month = (isNaN(month) || month == null) ? cal_current_date.getMonth() : month;
                 this.year = (isNaN(year) || year == null) ? cal_current_date.getFullYear() : year;
@@ -55,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
                 for (var i = 0; i < 9; i++) {
                     // this loop is for weekdays (cells)
                     for (var j = 0; j <= 6; j++) {
-                        html += '<td class="cell" data-day=' + day + '>';
+                        html += '<td class="cell" ondrop="drop(event)" ondragover="allowDrop(event)" data-day=' + day + '>';
 
                         if (day <= monthLength && (i > 0 || j >= startingDay)) {
                             html += day;
@@ -107,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
     buttonLeft.addEventListener('click', function(){
        $(div).empty();
         setTimeout(function() {
-         makeCalendar();    
+         makeCalendar("prev");    
         }, 400);
     });
     buttonRight.addEventListener('click', function(){
