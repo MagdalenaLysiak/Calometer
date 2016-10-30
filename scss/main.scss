@@ -5,9 +5,14 @@
 @import'main_calendar';
 @import'footer';
 
+$DEBUG: true;
+
 * {
     font-family: 'Roboto', sans-serif;
     color: $fontColor;
+    @if $DEBUG {
+        border: 1px dotted gray;
+    }
 }
 .main_container{
     width: 100%;
@@ -19,7 +24,10 @@
 }
 .container {
     width: 100%;
-    height: auto;
+}
+
+.workspace {
+    display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: center;   
 }
