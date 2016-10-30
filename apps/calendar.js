@@ -112,13 +112,13 @@ document.addEventListener('DOMContentLoaded', function(event) {
        $(div).empty();
         setTimeout(function() {
          makeCalendar("prev");    
-        }, 400);
+        }, 100);
     });
     buttonRight.addEventListener('click', function(){
        $(div).empty();
         setTimeout(function() {
          makeCalendar("next");    
-        }, 400);
+        }, 100);
     });
 
 });

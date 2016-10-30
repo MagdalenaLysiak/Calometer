@@ -1,10 +1,58 @@
 header{
     align-self: center;
     background-color: $cold-mainColor;
-    width: 100%;
-    height: 5em;
+    height: 7.8em;
     margin: 0 auto;
+    .main_container{
+        flex-direction:row;
+        justify-content: flex-start;
+    }
     img{
         padding-top: 0.4em;
+        width: 30%;
+        height: auto;
+        margin-right: 8.5em;
+    }
+    div{
+         &:nth-child(2) {
+        @include head-box($extra);
+             img{
+                 @include icons;
+                 margin-top: 1.2em;
+                 margin-left: 0.8em;
+             }
+      }
+         &:nth-child(3) {
+        @include head-box($warm-supportingColor);
+             img{
+                 @include icons;
+                 margin-top: 1em;
+                 margin-left: 0.8em;
+             }
+      }
+         &:nth-child(4) {
+        @include head-box($warm-mainColor);
+             img{
+                 @include icons;
+                 margin-top: 1.2em;
+                 margin-left: 0.8em;
+             }
+      }
+         &:nth-child(5) {
+        @include head-box($cold-mainColor);
+                img{
+                 @include icons;
+                 margin-top: 1em;
+                 margin-left: 0.8em;
+             }
+      }
+         &:nth-child(6) {
+        @include head-box($cold-supportingColor);
+             img{
+                 @include icons;
+                 margin-top: 1em;
+                 margin-left: 0.8em;
+             }
+      }
     }
 }
