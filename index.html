@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.3.js">
     </script>
+    <script src="apps/bmi_calculator.js"></script>
     <script src="apps/dragndrop.js"></script>
     <script src="apps/calendar.js"></script>
 </head>
@@ -30,19 +31,25 @@
         <h4>Let's start with basic informations about your body:</h4>
         <div class="bmi_calc">
             <p>Type in your weight:</p><br>
-            <input type="text"/>
+            <input id="weight" type="text"/>
         </div>
         <div class="bmi_calc">
             <p>Type in your height:</p><br>
             <input id="height" type="text"/>
         </div>
         <div class="bmi_calc">
-            <p>Type in your height:</p><br>
-            <p>Male</p><input type="checkbox" id="male"/>
-            <p>Female</p><input type="checkbox" id="female"/>
+            <p>Choose your sex:</p><br>
+            <input type="radio" name="sex" id="male" value="male" checked="checked"/>Male
+            <input type="radio" name="sex" id="female" value="female"/>Female
         </div>
-        <button type="submit">Go</button>
-            <p class="bmi_result"></p><!-- default hidden -->
+        <button id="button_submit" type="submit">Go</button>
+            <p class="bmi_result" class="hidden"></p><!-- default hidden -->
+        <br>
+        <div class="bmi_calc">
+            <p>Type in your target weight:</p><br>
+            <input id="target_weight" type="text"/>
+            <p class="kg_result" class="hidden"></p><!-- default hidden -->
+        </div>
     </article>
     <div class="container">
         <h2>Second step</h2>
@@ -59,7 +66,7 @@
             <div id="yoga" class="activities" draggable="true" ondragstart="drag(event)">Yoga</div>
             <div id="pilates" class="activities" draggable="true" ondragstart="drag(event)">Pilates</div>
             <div id="walk" class="activities" draggable="true" ondragstart="drag(event)">Walking</div>
-            <div id="weight" class="activities" draggable="true" ondragstart="drag(event)">Weight Training</div>
+            <div id="weight_training" class="activities" draggable="true" ondragstart="drag(event)">Weight Training</div>
             <div id="climbing" class="activities" draggable="true" ondragstart="drag(event)">Climbing</div>
         </div><!-- /.activity_menu -->
         <p><b>Note:</b> Every activity sign represents <br> 30 minutes of workout</p>

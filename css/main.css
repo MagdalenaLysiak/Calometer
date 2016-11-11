@@ -144,7 +144,7 @@ header div:nth-child(6) img {
 }
 
 /* line 31, C:/Users/Madzia/Desktop/Calometer/scss/_main_calendar.scss */
-.main_info .bmi_result {
+.main_info .hidden {
   display: none;
 }
 
@@ -347,7 +347,7 @@ article button {
 }
 
 /* line 29, C:/Users/Madzia/Desktop/Calometer/scss/_activity_colors.scss */
-#weight {
+#weight_training {
   background-color: #A467B2;
   color: white;
 }
