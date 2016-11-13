@@ -358,13 +358,23 @@ article button {
   color: white;
 }
 
-/* line 9, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
+/* line 1, C:/Users/Madzia/Desktop/Calometer/scss/_bmi.scss */
+.kg_result {
+  color: #D51DFF;
+}
+
+/* line 4, C:/Users/Madzia/Desktop/Calometer/scss/_bmi.scss */
+.bmi_result {
+  color: #D51DFF;
+}
+
+/* line 10, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
 * {
   font-family: 'Roboto', sans-serif;
   color: grey;
 }
 
-/* line 13, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
+/* line 14, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
 .main_container {
   width: 70em;
   margin: auto;
@@ -373,7 +383,7 @@ article button {
   justify-content: center;
 }
 
-/* line 20, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
+/* line 21, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
 .container {
   width: 100%;
   height: auto;

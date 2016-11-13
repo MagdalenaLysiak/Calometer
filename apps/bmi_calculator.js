@@ -8,31 +8,43 @@ document.addEventListener('DOMContentLoaded', function(event) {
         male = document.querySelector('#male'),
         result = document.querySelector('.bmi_result'),
         height_fraction = parseInt(height)/100,
-        height_pow = Math.pow(height_fraction,2);
-
-        var bmi = (Math.round((parseInt(weight)/height_pow) * 100)/100).toFixed(1);
+        height_pow = Math.pow(height_fraction,2),
+        bmi = (Math.round((parseInt(weight)/height_pow) * 100)/100).toFixed(1),
+        message = "";
+        
         result.removeAttribute('.hidden');
-        var message = "";
         if(bmi<= 18.5){
-          message = " Underweight - maybe you should think about proper diet first?"
-          result.append(bmi);
+          result.innerHTML = "";
+          message = "Your BMI is: " + bmi + ". Underweight - maybe you should think about proper diet first?";
           result.append(message);
         }
         if(bmi>= 18.5 && bmi <= 24.9){
-          message = " You have normal weight"
-          result.append(bmi);
+          result.innerHTML = "";
+          message = "Your BMI is: " + bmi + ". Your weight is within limits. Do you want it to be perfect?";
           result.append(message);
         }
         if(bmi>= 25 && bmi <= 29.9){
-          message = " You are overweight";
-          result.append(bmi);
+          result.innerHTML = "";
+          message = "Your BMI is: " + bmi + ". Overweight. Let's burn these calories!";
           result.append(message);
         }
         if(bmi>= 30){
-          message = " Obesity.";
-          result.append(bmi);
+          result.innerHTML = "";
+          message = "Your BMI is: " + bmi + ". Obesity. Proper exercise and healthy diet should help.";
           result.append(message);
         }
-});
+    });
+    
+    var targetWeight = document.querySelector('#target_weight'),
+        kg_result = document.querySelector('.kg_result');
+    
+        targetWeight.addEventListener('blur', function(event){
+          var targetValue = targetWeight.value,
+              weight = document.querySelector('#weight').value,
+              kg = parseInt(weight)-parseInt(targetValue),
+              kg_message = "You need to burn " + kg + "kg to succeed.";
+           kg_result.innerHTML = "";
+           kg_result.append(kg_message);
+    });
     
 });
