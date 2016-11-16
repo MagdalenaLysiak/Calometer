@@ -43,12 +43,16 @@
             <input type="radio" name="sex" id="female" value="female"/>Female
         </div>
         <button id="button_submit" type="submit">Go</button>
-            <p class="bmi_result" class="hidden"></p><!-- default hidden -->
+            <p class="bmi_result"></p>
         <br>
         <div class="bmi_calc">
             <p>Type in your target weight:</p><br>
             <input id="target_weight" type="text" placeholder="0"/>
-            <p class="kg_result" class="hidden"></p><!-- default hidden -->
+            <p class="kg_result"></p>
+        </div><br>
+        <button id="suggesting_button" type="submit">Need suggestions?</button><br>
+        <div class="bmi_calc suggestions hidden">
+            <h4>Our suggestions:</h4>
         </div>
     </article>
     <div class="container">

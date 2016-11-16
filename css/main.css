@@ -368,6 +368,12 @@ article button {
   color: #D51DFF;
 }
 
+/* line 7, C:/Users/Madzia/Desktop/Calometer/scss/_bmi.scss */
+#suggesting_button {
+  width: 10em;
+  margin-top: 2em;
+}
+
 /* line 10, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
 * {
   font-family: 'Roboto', sans-serif;

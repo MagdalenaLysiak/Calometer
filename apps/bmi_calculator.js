@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function(event) {
         bmi = (Math.round((parseInt(weight)/height_pow) * 100)/100).toFixed(1),
         message = "";
         
-        result.removeAttribute('.hidden');
         if(bmi<= 18.5){
           result.innerHTML = "";
           message = "Your BMI is: " + bmi + ". Underweight - maybe you should think about proper diet first?";
@@ -34,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
           result.append(message);
         }
     });
-    
+    // target weight calculator
     var targetWeight = document.querySelector('#target_weight'),
         kg_result = document.querySelector('.kg_result');
     
@@ -46,5 +45,31 @@ document.addEventListener('DOMContentLoaded', function(event) {
            kg_result.innerHTML = "";
            kg_result.append(kg_message);
     });
+    // suggestions
+    var text_field = document.querySelector('.suggestions'),
+        suggesting_button = document.querySelector('#suggesting_button');
+
+   suggesting_button.addEventListener('click', function(event){
+      
+       text_field.classList.remove('hidden');
+
+       var targetValue = targetWeight.value,
+           weight = document.querySelector('#weight').value,
+           kg = parseInt(weight)-parseInt(targetValue),
+           proposition ="",
+           base = 7000,
+           swimming = [468, "swimming"],
+           running = [780, "running"],
+           walking = [228, "walking"],
+           fitness = [300, "fitness"],
+           cycling = [322, "cycling"],
+           yoga = [175, "yoga"],
+           pilates = [210, "pilates"],
+           climbing = [560, "climbing"],
+           weight_training = [490, "weight training"];
+       
+           proposition = "You will need approximately " + Math.round((base*kg)/swimming[0]) + " hours of " + swimming[1] + ", or...";
+           text_field.append(proposition);
+   });
     
 });
