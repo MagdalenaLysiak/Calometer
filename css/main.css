@@ -374,6 +374,20 @@ article button {
   margin-top: 2em;
 }
 
+/* line 11, C:/Users/Madzia/Desktop/Calometer/scss/_bmi.scss */
+.left_row {
+  display: inline-block;
+  float: left;
+  width: auto;
+}
+
+/* line 14, C:/Users/Madzia/Desktop/Calometer/scss/_bmi.scss */
+.right_row {
+  display: inline-block;
+  float: left;
+  width: auto;
+}
+
 /* line 10, C:/Users/Madzia/Desktop/Calometer/scss/main.scss */
 * {
   font-family: 'Roboto', sans-serif;

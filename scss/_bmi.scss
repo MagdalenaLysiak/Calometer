@@ -7,5 +7,10 @@
 #suggesting_button{
     width: 10em;
     margin-top: 2em;
-    
+}
+.left_row{
+    @include rows;
+}
+.right_row{
+    @include rows;
 }

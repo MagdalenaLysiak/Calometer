@@ -1,6 +1,7 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calometer app</title>
@@ -12,77 +13,101 @@
     <script src="apps/dragndrop.js"></script>
     <script src="apps/calendar.js"></script>
 </head>
+
 <body>
     <header>
         <div class="main_container">
-        <img src="images/logo/logo.png"/>
-        <div class="image_head"><img src="images/icons/biking.svg" /></div>
-        <div class="image_head"><img src="images/icons/football.svg" /></div>
-        <div class="image_head"><img src="images/icons/running.svg" /></div>
-        <div class="image_head"><img src="images/icons/yoga.svg" /></div>
-        <div class="image_head"><img src="images/icons/climbing.svg" /></div>
+            <img src="images/logo/logo.png" />
+            <div class="image_head"><img src="images/icons/biking.svg" />
+            </div>
+            <div class="image_head"><img src="images/icons/football.svg" />
+            </div>
+            <div class="image_head"><img src="images/icons/running.svg" />
+            </div>
+            <div class="image_head"><img src="images/icons/yoga.svg" />
+            </div>
+            <div class="image_head"><img src="images/icons/climbing.svg" />
+            </div>
         </div>
     </header>
     <div class="main_container">
-    <article class="main_info">
-        <h1>Lost calories counting app, basing on your daily exercise schedule.</h1>
-        <br>
-        <h2>First step</h2>
-        <h4>Let's start with basic informations about your body:</h4>
-        <div class="bmi_calc">
-            <p>Type in your weight:</p><br>
-            <input id="weight" type="text" placeholder="60"/>
-        </div>
-        <div class="bmi_calc">
-            <p>Type in your height:</p><br>
-            <input id="height" type="text" placeholder="170"/>
-        </div>
-        <div class="bmi_calc">
-            <p>Choose your sex:</p><br>
-            <input type="radio" name="sex" id="male" value="male" checked="checked"/>Male
-            <input type="radio" name="sex" id="female" value="female"/>Female
-        </div>
-        <button id="button_submit" type="submit">Go</button>
+        <article class="main_info">
+            <h1>Lost calories counting app, basing on your daily exercise schedule.</h1>
+            <br>
+            <h2>First step</h2>
+            <h4>Let's start with basic informations about your body:</h4>
+            <div class="bmi_calc">
+                <p>Type in your weight:</p>
+                <br>
+                <input id="weight" type="text" placeholder="60" />
+            </div>
+            <div class="bmi_calc">
+                <p>Type in your height:</p>
+                <br>
+                <input id="height" type="text" placeholder="170" />
+            </div>
+            <div class="bmi_calc">
+                <p>Choose your sex:</p>
+                <br>
+                <input type="radio" name="sex" id="male" value="male" checked="checked" />Male
+                <input type="radio" name="sex" id="female" value="female" />Female
+            </div>
+            <button id="button_submit" type="submit">Go</button>
             <p class="bmi_result"></p>
-        <br>
-        <div class="bmi_calc">
-            <p>Type in your target weight:</p><br>
-            <input id="target_weight" type="text" placeholder="0"/>
-            <p class="kg_result"></p>
-        </div><br>
-        <button id="suggesting_button" type="submit">Need suggestions?</button><br>
-        <div class="bmi_calc suggestions hidden">
-            <h4>Our suggestions:</h4>
+            <br>
+            <div class="bmi_calc">
+                <p>Type in your target weight:</p>
+                <br>
+                <input id="target_weight" type="text" placeholder="0" />
+                <p class="kg_result"></p>
+            </div>
+            <br>
+            <button id="suggesting_button" type="submit">Need suggestions?</button>
+            <br>
+            <div class="bmi_calc suggestions hidden">
+                <h4>Our suggestions:</h4>
+                <p>You will need to make:</p>
+                <br>
+                <p class="left_row"></p>
+                <p class="right_row"></p>
+                <br>
+                <p>Go to the next step!</p>
+            </div>
+        </article>
+        <div class="container">
+            <h2>Second step</h2>
+            <div class="cal_buttons">
+                <button class="btn_left"><img src="images/icons/arrow_left.svg" />
+                </button>
+                <button class="btn_right"><img src="images/icons/arrow_right.svg" />
+                </button>
+            </div>
+            <div class="calendar_menu">
+                <div class="activity_menu" ondrop="drop(event)" ondragover="allowDrop(event)">
+                    <div id="run" class="activities" draggable="true" ondragstart="drag(event)">Running</div>
+                    <div id="swim" class="activities" draggable="true" ondragstart="drag(event)">Swimming</div>
+                    <div id="cycle" class="activities" draggable="true" ondragstart="drag(event)">Cycling</div>
+                    <div id="fitness" class="activities" draggable="true" ondragstart="drag(event)">Fitness</div>
+                    <div id="yoga" class="activities" draggable="true" ondragstart="drag(event)">Yoga</div>
+                    <div id="pilates" class="activities" draggable="true" ondragstart="drag(event)">Pilates</div>
+                    <div id="walk" class="activities" draggable="true" ondragstart="drag(event)">Walking</div>
+                    <div id="weight_training" class="activities" draggable="true" ondragstart="drag(event)">Weight Training</div>
+                    <div id="climbing" class="activities" draggable="true" ondragstart="drag(event)">Climbing</div>
+                </div>
+                <!-- /.activity_menu -->
+                <p><b>Note:</b> Every activity sign represents
+                    <br> 30 minutes of workout</p>
+                <h3>Daily Summary</h3>
+                <div class="daily_summary"></div>
+                <h3>General Summary</h3>
+                <div class="summary"></div>
+            </div>
+            <div class="cal_canvas">
+                <div class="calendar"></div>
+            </div>
+            <!-- /.cal_canvas -->
         </div>
-    </article>
-    <div class="container">
-        <h2>Second step</h2>
-        <div class="cal_buttons">
-             <button class="btn_left"><img src="images/icons/arrow_left.svg"/></button>
-             <button class="btn_right"><img src="images/icons/arrow_right.svg"/></button>
-        </div>
-        <div class="calendar_menu">
-        <div class="activity_menu" ondrop="drop(event)" ondragover="allowDrop(event)">
-            <div id="run" class="activities" draggable="true" ondragstart="drag(event)">Running</div>
-            <div id="swim" class="activities" draggable="true" ondragstart="drag(event)">Swimming</div>
-            <div id="cycle" class="activities" draggable="true" ondragstart="drag(event)">Cycling</div>
-            <div id="fitness" class="activities" draggable="true" ondragstart="drag(event)">Fitness</div>
-            <div id="yoga" class="activities" draggable="true" ondragstart="drag(event)">Yoga</div>
-            <div id="pilates" class="activities" draggable="true" ondragstart="drag(event)">Pilates</div>
-            <div id="walk" class="activities" draggable="true" ondragstart="drag(event)">Walking</div>
-            <div id="weight_training" class="activities" draggable="true" ondragstart="drag(event)">Weight Training</div>
-            <div id="climbing" class="activities" draggable="true" ondragstart="drag(event)">Climbing</div>
-        </div><!-- /.activity_menu -->
-        <p><b>Note:</b> Every activity sign represents <br> 30 minutes of workout</p>
-        <h3>Daily Summary</h3>
-        <div class="daily_summary"></div>
-        <h3>General Summary</h3>
-        <div class="summary"></div>
-        </div>
-        <div class="cal_canvas">
-            <div class="calendar"></div>
-        </div><!-- /.cal_canvas -->
-        </div> <!-- /.container -->
+        <!-- /.container -->
         <article>
             <h2>Third step</h2>
             <br>
@@ -90,12 +115,13 @@
             <h4>Save this schedule on your computer or print it and get started burning these calories!</h4>
             <!-- Web2PDF Converter Button BEGIN -->
             <script type="text/javascript">
-            var
-            pdfbuttonlabel="Convert to PDF"
+                var
+                    pdfbuttonlabel = "Convert to PDF"
             </script>
             <script src="http://www.web2pdfconvert.com/pdfbutton2.js" id="Web2PDF" type="text/javascript"></script>
             <!-- Web2PDF Converter Button END -->
         </article>
     </div>
 </body>
+
 </html>

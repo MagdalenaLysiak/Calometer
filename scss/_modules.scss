@@ -4,11 +4,16 @@
     border-color: $borderColor;
 }
 @mixin head-box($color){
-        background-color:$color;
-        width:8em;
-        height: 7.8em;
+    background-color:$color;
+    width:8em;
+    height: 7.8em;
 }
 @mixin icons(){
-        width:80%;
-        height: auto;
+    width:80%;
+    height: auto;
+}
+@mixin rows(){
+    display: inline-block;
+    float: left;
+    width: auto;
 }
